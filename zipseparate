@@ -4,6 +4,7 @@
 # When used for Custom Action for Thunar : Use %F
 
 args=( "$@" )
+IFS=""
 for f in ${args[@]}; do
     if [ -d ${f} ]; then
         zip -rq "${f%/}.zip" "$f"
